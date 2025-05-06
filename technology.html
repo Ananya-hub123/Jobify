@@ -1,0 +1,741 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tech Trends 2023</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        /* Modern CSS Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Gradient Background */
+        body {
+            font-family: 'Poppins', sans-serif;
+            min-height: 100vh;
+            background: linear-gradient(135deg,
+                    rgba(16, 24, 39, 0.95) 0%,
+                    rgba(31, 41, 55, 0.95) 100%),
+                url('bgimage.jpg') center/cover fixed;
+            color: #fff;
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        /* Modern Glassmorphism Header */
+        header {
+            backdrop-filter: blur(10px);
+            background: rgba(255, 255, 255, 0.08);
+            padding: 1rem 5%;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: #fff;
+            text-decoration: none;
+            transition: transform 0.3s ease;
+        }
+
+        .logo img {
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .logo span {
+            color: #4CAF50;
+            position: relative;
+            animation: arrowPulse 1.5s infinite;
+        }
+
+        @keyframes arrowPulse {
+
+            0%,
+            100% {
+                opacity: 1;
+            }
+
+            50% {
+                opacity: 0.5;
+            }
+        }
+
+        /* Navigation Enhancements */
+        nav ul {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: 500;
+            position: relative;
+            padding: 0.5rem 1rem;
+            border-radius: 0.5rem;
+            transition: all 0.3s ease;
+        }
+
+        nav a::before {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: #4CAF50;
+            transition: width 0.3s ease;
+        }
+
+        nav a:hover::before {
+            width: 100%;
+        }
+
+        /* Main Content Section */
+        .technology-section {
+            padding: 120px 5% 50px;
+            text-align: center;
+        }
+
+        h2 {
+            font-size: 2.8rem;
+            margin-bottom: 2rem;
+            background: linear-gradient(45deg, #4CAF50, #2196F3);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Enhanced Main Button */
+        .main-button {
+            padding: 1.2rem 2.5rem;
+            font-size: 1.2rem;
+            background: linear-gradient(45deg, #4CAF50, #2196F3);
+            border: none;
+            border-radius: 1rem;
+            color: white;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+            position: relative;
+            overflow: hidden;
+            margin: 2rem 0;
+        }
+
+        .main-button::after {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: rgba(255, 255, 255, 0.1);
+            transform: rotate(45deg) translate(-20%, 100%);
+            transition: all 0.5s ease;
+        }
+
+        .main-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 12px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        .main-button:hover::after {
+            transform: rotate(45deg) translate(20%, -100%);
+        }
+
+        /* Interactive Grid Buttons */
+        .button-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        .button-grid button {
+            padding: 1.5rem;
+            background: rgba(76, 175, 80, 0.1);
+            border: 1px solid rgba(76, 175, 80, 0.3);
+            border-radius: 1rem;
+            color: #fff;
+            font-size: 1.1rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            backdrop-filter: blur(5px);
+            position: relative;
+            overflow: hidden;
+            transform: perspective(500px) rotateX(0) rotateY(0);
+            box-shadow:
+                inset 0 0 15px rgba(76, 175, 80, 0.6),
+                0 0 20px rgba(76, 175, 80, 0.4);
+        }
+
+        .button-grid button:hover {
+            background: rgba(76, 175, 80, 0.3);
+            box-shadow:
+                inset 0 0 25px rgba(76, 175, 80, 0.8),
+                0 0 30px rgba(76, 175, 80, 0.6);
+            transform: perspective(500px) rotateX(10deg) rotateY(10deg);
+        }
+
+        .button-grid button:active {
+            background: rgba(76, 175, 80, 0.5);
+            box-shadow:
+                inset 0 0 35px rgba(76, 175, 80, 1),
+                0 0 40px rgba(76, 175, 80, 0.8);
+        }
+
+        /* Scroll Animation */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .technology-section>* {
+            animation: fadeInUp 0.8s ease-out forwards;
+            opacity: 0;
+        }
+
+        .technology-section h2 {
+            animation-delay: 0.2s;
+        }
+
+        .main-button {
+            animation-delay: 0.4s;
+        }
+
+        .button-grid {
+            animation-delay: 0.6s;
+        }
+
+        /* Modal Styles */
+        .modal-overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.8);
+            z-index: 1000;
+            justify-content: center;
+            align-items: center;
+            overflow-y: auto;
+
+        }
+
+        .modal-content {
+            background: #1f2937;
+            padding: 1rem;
+            border-radius: 1rem;
+            width: 90%;
+            max-width: 1200px;
+            height: 90vh;
+
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .tableauPlaceholder {
+            width: 100%;
+            flex-grow: 1;
+
+            overflow: hidden;
+        }
+
+        .modal-content iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+            border-radius: 0.5rem;
+        }
+
+        .close-modal {
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            background: #4CAF50;
+            color: white;
+            border: none;
+            padding: 0.5rem 1rem;
+            border-radius: 0.5rem;
+            cursor: pointer;
+            font-size: 1rem;
+            z-index: 10;
+        }
+
+        .close-modal:hover {
+            background: #45a049;
+        }
+
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            h2 {
+                font-size: 2rem;
+            }
+
+            .button-grid {
+                grid-template-columns: 1fr;
+            }
+
+            nav ul {
+                gap: 1rem;
+            }
+
+            .modal-content {
+                width: 95%;
+                height: 70%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <a href="#" class="logo">
+            <img src="logo1.jpg" alt="Tech Trends Logo">
+            Technology<span>>></span>
+        </a>
+        <nav>
+            <ul>
+                <li><a href="index.php">Home</a></li>
+                <li><a href="#trends">Trends</a></li>
+                <li><a href="#about">About</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="technology-section">
+        <h2>Future Tech Careers Await!</h2>
+        <button class="main-button">Explore Job Trend Predictions</button>
+
+        <div class="button-grid">
+            <button id="AIEngineerButton">🚀 AI Engineer</button>
+            <button id="cyberSecurityButton">🔒 Cyber Security</button>
+            <button id="DataScientistButton">📊 Data Scientist</button>
+            <button id="MachineLearningEngineerButton">🤖 ML Specialist</button>
+            <button id="blockchainEngineerButton">🖧 Blockchain Engineer</button>
+            <button id="DataAnalystButton">📈 Data Analyst</button>
+            <button id="SoftwareDeveloperButton">🌐 Software Developer</button>
+        </div>
+    </section>
+
+    <!-- Modal for Cyber Analyst Dashboard -->
+    <div class="modal-overlay" id="tableauModal">
+        <div class="modal-content">
+            <button class="close-modal" id="closeModal">Close</button>
+            <div class='tableauPlaceholder' id='viz1740511471917'
+                style='position: relative;width: 100%; height: 600px;'>
+                <noscript>
+                    <a href='#'>
+                        <img alt='Dashboard 1' src='https://public.tableau.com/static/images/NJ/NJCZ757CP/1_rss.png'
+                            style='border: none' />
+                    </a>
+                </noscript>
+                <object class='tableauViz' style='display:none;'>
+                    <param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' />
+                    <param name='embed_code_version' value='3' />
+                    <param name='path' value='shared/NJCZ757CP' />
+                    <param name='toolbar' value='yes' />
+                    <param name='static_image' value='https://public.tableau.com/static/images/NJ/NJCZ757CP/1.png' />
+                    <param name='animate_transition' value='yes' />
+                    <param name='display_static_image' value='yes' />
+                    <param name='display_spinner' value='yes' />
+                    <param name='display_overlay' value='yes' />
+                    <param name='display_count' value='yes' />
+                    <param name='language' value='en-US' />
+                    <param name='filter' value='publish=yes' />
+                </object>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal for Blockchain Engineer Dashboard -->
+    <div class="modal-overlay" id="blockchainEngineerModal">
+        <div class="modal-content">
+            <button class="close-modal" id="closeBlockchainEngineerModal">Close</button>
+            <div class='tableauPlaceholder' id='viz1740570991781'
+                style='position: relative; width: 100%; height: 600px;'>
+                <noscript>
+                    <a href='#'>
+                        <img alt='Dashboard 1'
+                            src='https://public.tableau.com/static/images/Bl/BlockchainEngineer/Dashboard1/1_rss.png'
+                            style='border: none' />
+                    </a>
+                </noscript>
+                <object class='tableauViz' style='display:none;'>
+                    <param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' />
+                    <param name='embed_code_version' value='3' />
+                    <param name='site_root' value='' />
+                    <param name='name' value='BlockchainEngineer/Dashboard1' />
+                    <param name='tabs' value='no' />
+                    <param name='toolbar' value='yes' />
+                    <param name='static_image'
+                        value='https://public.tableau.com/static/images/Bl/BlockchainEngineer/Dashboard1/1.png' />
+                    <param name='animate_transition' value='yes' />
+                    <param name='display_static_image' value='yes' />
+                    <param name='display_spinner' value='yes' />
+                    <param name='display_overlay' value='yes' />
+                    <param name='display_count' value='yes' />
+                    <param name='language' value='en-US' />
+                    <param name='filter' value='publish=yes' />
+                </object>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal for Machine learning Dashboard -->
+    <div class="modal-overlay" id="MachineLearningEngineerModal">
+        <div class="modal-content">
+            <button class="close-modal" id="closeMachineLearningEngineerModal">Close</button>
+            <div class='tableauPlaceholder' id='viz1740574431230'
+                style='position: relative; width: 100%; height: 600px;'>
+                <noscript>
+                    <a href='#'>
+                        <img alt='Dashboard 1'
+                            src='https://public.tableau.com/static/images/Ma/MachineLearningEngineer/Dashboard1/1_rss.png'
+                            style='border: none' />
+                    </a>
+                </noscript>
+                <object class='tableauViz' style='display:none;'>
+                    <param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' />
+                    <param name='embed_code_version' value='3' />
+                    <param name='site_root' value='' />
+                    <param name='name' value='MachineLearningEngineer/Dashboard1' />
+                    <param name='tabs' value='no' />
+                    <param name='toolbar' value='yes' />
+                    <param name='static_image'
+                        value='https://public.tableau.com/static/images/Ma/MachineLearningEngineer/Dashboard1/1.png' />
+                    <param name='animate_transition' value='yes' />
+                    <param name='display_static_image' value='yes' />
+                    <param name='display_spinner' value='yes' />
+                    <param name='display_overlay' value='yes' />
+                    <param name='display_count' value='yes' />
+                    <param name='language' value='en-US' />
+                    <param name='filter' value='publish=yes' />
+                </object>
+            </div>
+        </div>
+    </div>
+
+    <!-- AI Engineer Dashboard -->
+    <div class="modal-overlay" id="AIEngineerModal">
+        <div class="modal-content">
+            <button class="close-modal" id="closeAIEngineerModal">Close</button>
+            <div class="tableauPlaceholder" id="viz1740577590924" style="position: relative">
+                <noscript>
+                    <a href="#">
+                        <img alt="Dashboard 1"
+                            src="https://public.tableau.com/static/images/AI/AIEngineer/Dashboard1/1_rss.png"
+                            style="border: none" />
+                    </a>
+                </noscript>
+                <object class="tableauViz" style="display:none;">
+                    <param name="host_url" value="https%3A%2F%2Fpublic.tableau.com%2F" />
+                    <param name="embed_code_version" value="3" />
+                    <param name="site_root" value="" />
+                    <param name="name" value="AIEngineer/Dashboard1" />
+                    <param name="tabs" value="no" />
+                    <param name="toolbar" value="yes" />
+                    <param name="static_image"
+                        value="https://public.tableau.com/static/images/AI/AIEngineer/Dashboard1/1.png" />
+                    <param name="animate_transition" value="yes" />
+                    <param name="display_static_image" value="yes" />
+                    <param name="display_spinner" value="yes" />
+                    <param name="display_overlay" value="yes" />
+                    <param name="display_count" value="yes" />
+                    <param name="language" value="en-US" />
+                    <param name="filter" value="publish=yes" />
+                </object>
+            </div>
+        </div>
+    </div>
+
+    <!-- Software Developer Dashboard -->
+    <div class="modal-overlay" id="SoftwareDeveloperModal">
+        <div class="modal-content">
+            <button class="close-modal" id="closeSoftwareDeveloperModal">Close</button>
+            <div class="tableauPlaceholder" id="viz1740581411567" style="position: relative">
+                <noscript>
+                    <a href="#">
+                        <img alt="Dashboard 1"
+                            src="https://public.tableau.com/static/images/So/SoftwareDeveloper/Dashboard1/1_rss.png"
+                            style="border: none" />
+                    </a>
+                </noscript>
+                <object class="tableauViz" style="display:none;">
+                    <param name="host_url" value="https%3A%2F%2Fpublic.tableau.com%2F" />
+                    <param name="embed_code_version" value="3" />
+                    <param name="site_root" value="" />
+                    <param name="name" value="SoftwareDeveloper/Dashboard1" />
+                    <param name="tabs" value="no" />
+                    <param name="toolbar" value="yes" />
+                    <param name="static_image"
+                        value="https://public.tableau.com/static/images/So/SoftwareDeveloper/Dashboard1/1.png" />
+                    <param name="animate_transition" value="yes" />
+                    <param name="display_static_image" value="yes" />
+                    <param name="display_spinner" value="yes" />
+                    <param name="display_overlay" value="yes" />
+                    <param name="display_count" value="yes" />
+                    <param name="language" value="en-US" />
+                    <param name="filter" value="publish=yes" />
+                </object>
+            </div>
+        </div>
+    </div>
+
+    <!-- Data Analyst Dashboard -->
+    <div class="modal-overlay" id="DataAnalystModal">
+        <div class="modal-content">
+            <button class="close-modal" id="closeDataAnalystModal">Close</button>
+            <div class="tableauPlaceholder" id="viz1740592435994" style="position: relative">
+                <noscript>
+                    <a href="#">
+                        <img alt="Dashboard 1"
+                            src="https://public.tableau.com/static/images/Da/DataAnalyst_17405923069640/Dashboard1/1_rss.png"
+                            style="border: none" />
+                    </a>
+                </noscript>
+                <object class="tableauViz" style="display:none;">
+                    <param name="host_url" value="https%3A%2F%2Fpublic.tableau.com%2F" />
+                    <param name="embed_code_version" value="3" />
+                    <param name="site_root" value="" />
+                    <param name="name" value="DataAnalyst_17405923069640/Dashboard1" />
+                    <param name="tabs" value="no" />
+                    <param name="toolbar" value="yes" />
+                    <param name="static_image"
+                        value="https://public.tableau.com/static/images/Da/DataAnalyst_17405923069640/Dashboard1/1.png" />
+                    <param name="animate_transition" value="yes" />
+                    <param name="display_static_image" value="yes" />
+                    <param name="display_spinner" value="yes" />
+                    <param name="display_overlay" value="yes" />
+                    <param name="display_count" value="yes" />
+                    <param name="language" value="en-US" />
+                    <param name="filter" value="publish=yes" />
+                </object>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <!-- Data Scientist Dashboard -->
+    <div class="modal-overlay" id="DataScientstModal">
+        <div class="modal-content">
+            <button class="close-modal" id="closeDataScientstModal">Close</button>
+            <div class="tableauPlaceholder" id="viz1740599865345" style="position: relative">
+
+
+                <noscript>
+                    <a href="#">
+                        <img alt="Dashboard 1"
+                            src="https://public.tableau.com/static/images/Da/DataScientist_17405998174330/Dashboard1/1_rss.png"
+                            style="border: none" />
+                    </a>
+                </noscript>
+
+
+                <object class="tableauViz" style="display: none;">
+                    <param name="host_url" value="https%3A%2F%2Fpublic.tableau.com%2F" />
+                    <param name="embed_code_version" value="3" />
+                    <param name="site_root" value="" />
+                    <param name="name" value="DataScientist_17405998174330/Dashboard1" />
+                    <param name="tabs" value="no" />
+                    <param name="toolbar" value="yes" />
+                    <param name="static_image"
+                        value="https://public.tableau.com/static/images/Da/DataScientist_17405998174330/Dashboard1/1.png" />
+                    <param name="animate_transition" value="yes" />
+                    <param name="display_static_image" value="yes" />
+                    <param name="display_spinner" value="yes" />
+                    <param name="display_overlay" value="yes" />
+                    <param name="display_count" value="yes" />
+                    <param name="language" value="en-US" />
+                    <param name="filter" value="publish=yes" />
+                </object>
+            </div>
+        </div>
+    </div>
+
+
+
+    <script>
+        // Function to initialize Tableau dashboard
+        function initializeTableauViz(placeholderId) {
+            const placeholderDiv = document.getElementById(placeholderId);
+            const vizElement = placeholderDiv.getElementsByTagName('object')[0];
+
+
+
+            // Set dimensions dynamically
+            if (placeholderDiv.offsetWidth > 800) {
+                vizElement.style.minWidth = '800px';
+                vizElement.style.maxWidth = '100%';
+                vizElement.style.minHeight = '627px';
+                vizElement.style.maxHeight = (placeholderDiv.offsetWidth * 0.75) + 'px';
+            } else if (placeholderDiv.offsetWidth > 500) {
+                vizElement.style.minWidth = '800px';
+                vizElement.style.maxWidth = '100%';
+                vizElement.style.minHeight = '627px';
+                vizElement.style.maxHeight = (placeholderDiv.offsetWidth * 0.75) + 'px';
+            } else {
+                vizElement.style.width = '100%';
+                vizElement.style.height = '927px';
+            }
+            // Load Tableau JavaScript API
+            const scriptElement = document.createElement('script');
+            scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';
+            vizElement.parentNode.insertBefore(scriptElement, vizElement);
+        }
+
+        // Event listeners for opening modals
+        document.getElementById('cyberSecurityButton').addEventListener('click', () => {
+            document.getElementById('tableauModal').style.display = 'flex';
+            initializeTableauViz('viz1740511471917');
+        });
+
+        document.getElementById('blockchainEngineerButton').addEventListener('click', () => {
+            document.getElementById('blockchainEngineerModal').style.display = 'flex';
+            initializeTableauViz('viz1740570991781');
+        });
+
+        document.getElementById('MachineLearningEngineerButton').addEventListener('click', () => {
+            document.getElementById('MachineLearningEngineerModal').style.display = 'flex';
+            initializeTableauViz('viz1740574431230');
+        });
+        document.getElementById('AIEngineerButton').addEventListener('click', () => {
+            document.getElementById('AIEngineerModal').style.display = 'flex';
+            initializeTableauViz('viz1740577590924');
+        });
+        document.getElementById('SoftwareDeveloperButton').addEventListener('click', () => {
+            document.getElementById('SoftwareDeveloperModal').style.display = 'flex';
+            initializeTableauViz('viz1740581411567');
+        });
+
+        document.getElementById('DataAnalystButton').addEventListener('click', () => {
+            document.getElementById('DataAnalystModal').style.display = 'flex';
+            initializeTableauViz('viz1740592435994');
+        });
+
+        document.getElementById('DataScientistButton').addEventListener('click', () => {
+            document.getElementById('DataScientstModal').style.display = 'flex';
+            initializeTableauViz('viz1740599865345');
+        });
+
+
+        // Event listeners for closing modals
+        document.getElementById('closeModal').addEventListener('click', () => {
+            document.getElementById('tableauModal').style.display = 'none';
+        });
+
+        document.getElementById('closeBlockchainEngineerModal').addEventListener('click', () => {
+            document.getElementById('blockchainEngineerModal').style.display = 'none';
+        });
+
+        document.getElementById('closeMachineLearningEngineerModal').addEventListener('click', () => {
+            document.getElementById('MachineLearningEngineerModal').style.display = 'none';
+        });
+
+        document.getElementById('closeAIEngineerModal').addEventListener('click', () => {
+            document.getElementById('AIEngineerModal').style.display = 'none';
+        });
+
+        document.getElementById('closeSoftwareDeveloperModal').addEventListener('click', () => {
+            document.getElementById('SoftwareDeveloperModal').style.display = 'none';
+        });
+
+        document.getElementById('closeDataAnalystModal').addEventListener('click', () => {
+            document.getElementById('DataAnalystModal').style.display = 'none';
+        });
+
+        document.getElementById('closeDataScientstModal').addEventListener('click', () => {
+            document.getElementById('DataScientstModal').style.display = 'none';
+        });
+
+
+
+        // Close modals when clicking outside the modal content
+        document.querySelectorAll('.modal-overlay').forEach(modal => {
+            modal.addEventListener('click', (e) => {
+                if (e.target === modal) {
+                    modal.style.display = 'none';
+                }
+            });
+        });
+
+
+        // Add dynamic tilt effect based on cursor position
+        document.querySelectorAll('.button-grid button').forEach(button => {
+            button.addEventListener('mousemove', (e) => {
+                const rect = button.getBoundingClientRect();
+                const x = e.clientX - rect.left;
+                const y = e.clientY - rect.top;
+                const centerX = rect.width / 2;
+                const centerY = rect.height / 2;
+                const rotateX = ((y - centerY) / centerY) * 3;
+                const rotateY = ((x - centerX) / centerX) * -3;
+                button.style.setProperty('--rotate-x', `${rotateX}deg`);
+                button.style.setProperty('--rotate-y', `${rotateY}deg`);
+            });
+
+            button.addEventListener('mouseleave', () => {
+                button.style.setProperty('--rotate-x', '0deg');
+                button.style.setProperty('--rotate-y', '0deg');
+            });
+
+            button.addEventListener('click', () => {
+                button.style.backgroundColor = 'rgba(76, 175, 80, 0.5)';
+                setTimeout(() => {
+                    button.style.backgroundColor = 'rgba(76, 175, 80, 0.2)';
+                }, 200);
+            });
+        });
+
+        // Smooth scroll for navigation
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Header scroll effect
+        window.addEventListener('scroll', () => {
+            const header = document.querySelector('header');
+            header.style.background = window.scrollY > 50
+                ? 'rgba(16, 24, 39, 0.95)'
+                : 'rgba(255, 255, 255, 0.08)';
+        });
+    </script>
+</body>
+
+</html>

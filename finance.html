@@ -1,0 +1,862 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Finance Careers 2025</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        /* Modern CSS Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Gradient Background */
+        body {
+            font-family: 'Poppins', sans-serif;
+            min-height: 100vh;
+            background: linear-gradient(135deg,
+                    rgba(16, 24, 39, 0.95) 0%,
+                    rgba(31, 41, 55, 0.95) 100%),
+                url('bgimage.jpg') center/cover fixed;
+            color: #fff;
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        /* Modern Glassmorphism Header */
+        header {
+            backdrop-filter: blur(10px);
+            background: rgba(255, 255, 255, 0.08);
+            padding: 1rem 5%;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: #fff;
+            text-decoration: none;
+            transition: transform 0.3s ease;
+        }
+
+        .logo img {
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .logo span {
+            color: #4CAF50;
+            position: relative;
+            animation: arrowPulse 1.5s infinite;
+        }
+
+        @keyframes arrowPulse {
+
+            0%,
+            100% {
+                opacity: 1;
+            }
+
+            50% {
+                opacity: 0.5;
+            }
+        }
+
+        /* Navigation Enhancements */
+        nav ul {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: 500;
+            position: relative;
+            padding: 0.5rem 1rem;
+            border-radius: 0.5rem;
+            transition: all 0.3s ease;
+        }
+
+        nav a::before {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: #4CAF50;
+            transition: width 0.3s ease;
+        }
+
+        nav a:hover::before {
+            width: 100%;
+        }
+
+        /* Main Content Section */
+        .finance-section {
+            padding: 120px 5% 50px;
+            text-align: center;
+        }
+
+        h2 {
+            font-size: 2.8rem;
+            margin-bottom: 2rem;
+            background: linear-gradient(45deg, #4CAF50, #2196F3);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Enhanced Main Button */
+        .main-button {
+            padding: 1.2rem 2.5rem;
+            font-size: 1.2rem;
+            background: linear-gradient(45deg, #4CAF50, #2196F3);
+            border: none;
+            border-radius: 1rem;
+            color: white;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+            position: relative;
+            overflow: hidden;
+            margin: 2rem 0;
+        }
+
+        .main-button::after {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: rgba(255, 255, 255, 0.1);
+            transform: rotate(45deg) translate(-20%, 100%);
+            transition: all 0.5s ease;
+        }
+
+        .main-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 12px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        .main-button:hover::after {
+            transform: rotate(45deg) translate(20%, -100%);
+        }
+
+        /* Interactive Grid Buttons */
+        .button-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        .button-grid button {
+            padding: 1.5rem;
+            background: rgba(76, 175, 80, 0.1);
+            border: 1px solid rgba(76, 175, 80, 0.3);
+            border-radius: 1rem;
+            color: #fff;
+            font-size: 1.1rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            backdrop-filter: blur(5px);
+            position: relative;
+            overflow: hidden;
+            transform: perspective(500px) rotateX(0) rotateY(0);
+            box-shadow:
+                inset 0 0 15px rgba(76, 175, 80, 0.6),
+                0 0 20px rgba(76, 175, 80, 0.4);
+        }
+
+        .button-grid button:hover {
+            background: rgba(76, 175, 80, 0.3);
+            box-shadow:
+                inset 0 0 25px rgba(76, 175, 80, 0.8),
+                0 0 30px rgba(76, 175, 80, 0.6);
+            transform: perspective(500px) rotateX(10deg) rotateY(10deg);
+        }
+
+        .button-grid button:active {
+            background: rgba(76, 175, 80, 0.5);
+            box-shadow:
+                inset 0 0 35px rgba(76, 175, 80, 1),
+                0 0 40px rgba(76, 175, 80, 0.8);
+        }
+
+        /* Scroll Animation */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .finance-section>* {
+            animation: fadeInUp 0.8s ease-out forwards;
+            opacity: 0;
+        }
+
+        .finance-section h2 {
+            animation-delay: 0.2s;
+        }
+
+        .main-button {
+            animation-delay: 0.4s;
+        }
+
+        .button-grid {
+            animation-delay: 0.6s;
+        }
+
+        /* Modal Styles */
+        .modal-overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.7);
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+        }
+
+        .modal-content {
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            width: 95%;
+            height: 95%;
+            max-width: 1400px;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .close-modal {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background: #f44336;
+            color: white;
+            border: none;
+            padding: 5px 10px;
+            border-radius: 4px;
+            cursor: pointer;
+            z-index: 1001;
+        }
+
+        .tableauPlaceholder {
+            width: 100%;
+            height: calc(100% - 40px);
+            min-height: 600px;
+        }
+
+        .tableauViz {
+            width: 100% !important;
+            height: 100% !important;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <a href="#" class="logo">
+            <img src="logo1.jpg" alt="Finance Logo">
+            Finance<span>>></span>
+        </a>
+        <nav>
+            <ul>
+                <li><a href="index.php">Home</a></li>
+                <li><a href="#trends">Trends</a></li>
+                <li><a href="#about">About</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="finance-section">
+        <h2>Finance Careers of the Future!</h2>
+        <button class="main-button">Explore Job Trend Predictions</button>
+
+        <div class="button-grid">
+            <button id="ChartedAccountantButton">📊 Charted Accountant</button>
+            <button id="CompanySecretaryButton">🤝 Company Secretary</button>
+            <button id="InvestmentBankerButton">🏦 Investment Banker</button>
+            <button id="FinancialAdvisorButton">💰 Financial Advisor</button>
+            <button id="AuditorButton">📂 Auditor</button>
+            <button id="FinancialAnalystButton">📉 Financial Analyst</button>
+            <button id="InsuranceBrokerButton">🛡️ Insurance Broker</button>
+            <button id="CertifiedpublicaccountantButton">💹 Certified public accountant</button>
+            <button id="ActuarialAnalystButton">🔢 Actuarial Analyst</button>
+            <button id="CMAButton">📋 CMA</button>
+        </div>
+    </section>
+
+    <!-- Modal for Auditor Dashboard -->
+    <div class="modal-overlay" id="AuditorModal">
+        <div class="modal-content">
+            <button class="close-modal" id="closeAuditorModal">Close</button>
+            <div class='tableauPlaceholder' id='viz1743660210325' style='position: relative'>
+                <noscript><a href='#'><img alt='Dashboard 1'
+                            src='https://public.tableau.com/static/images/6G/6G4NK7FFM/1_rss.png'
+                            style='border: none' /></a></noscript>
+                <object class='tableauViz' style='display:none;'>
+                    <param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' />
+                    <param name='embed_code_version' value='3' />
+                    <param name='path' value='shared/6G4NK7FFM' />
+                    <param name='toolbar' value='yes' />
+                    <param name='static_image' value='https://public.tableau.com/static/images/6G/6G4NK7FFM/1.png' />
+                    <param name='animate_transition' value='yes' />
+                    <param name='display_static_image' value='yes' />
+                    <param name='display_spinner' value='yes' />
+                    <param name='display_overlay' value='yes' />
+                    <param name='display_count' value='yes' />
+                    <param name='language' value='en-US' />
+                    <param name='filter' value='publish=yes' />
+                </object>
+            </div>
+            <script type='text/javascript'>
+                var divElement = document.getElementById('viz1743660210325');
+                var vizElement = divElement.getElementsByTagName('object')[0];
+                vizElement.style.width = '100%';
+                vizElement.style.height = (divElement.offsetWidth * 0.75) + 'px';
+                var scriptElement = document.createElement('script');
+                scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';
+                vizElement.parentNode.insertBefore(scriptElement, vizElement);
+            </script>
+        </div>
+    </div>
+
+    <!-- Modal for Charted Accountant Dashboard -->
+    <div class="modal-overlay" id="ChartedAccountantModal">
+        <div class="modal-content">
+            <button class="close-modal" id="closeChartedAccountantModal">Close</button>
+            <div class='tableauPlaceholder' id='viz1743662679181' style='position: relative'>
+                <noscript><a href='#'><img alt='Dashboard 1'
+                            src='https://public.tableau.com/static/images/CA/CA_17436626533830/Dashboard1/1_rss.png'
+                            style='border: none' /></a></noscript>
+                <object class='tableauViz' style='display:none;'>
+                    <param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' />
+                    <param name='embed_code_version' value='3' />
+                    <param name='site_root' value='' />
+                    <param name='name' value='CA_17436626533830/Dashboard1' />
+                    <param name='tabs' value='no' />
+                    <param name='toolbar' value='yes' />
+                    <param name='static_image'
+                        value='https://public.tableau.com/static/images/CA/CA_17436626533830/Dashboard1/1.png' />
+                    <param name='animate_transition' value='yes' />
+                    <param name='display_static_image' value='yes' />
+                    <param name='display_spinner' value='yes' />
+                    <param name='display_overlay' value='yes' />
+                    <param name='display_count' value='yes' />
+                    <param name='language' value='en-US' />
+                    <param name='filter' value='publish=yes' />
+                </object>
+            </div>
+            <script type='text/javascript'>
+                var divElement = document.getElementById('viz1743662679181');
+                var vizElement = divElement.getElementsByTagName('object')[0];
+                vizElement.style.width = '100%';
+                vizElement.style.height = (divElement.offsetWidth * 0.75) + 'px';
+                var scriptElement = document.createElement('script');
+                scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';
+                vizElement.parentNode.insertBefore(scriptElement, vizElement);
+            </script>
+        </div>
+    </div>
+
+    <!-- Modal for Certified public accountant Dashboard -->
+    <div class="modal-overlay" id="CertifiedpublicaccountantModal">
+        <div class="modal-content">
+            <button class="close-modal" id="closeCertifiedpublicaccountantModal">Close</button>
+            <div class='tableauPlaceholder' id='viz1743661446196' style='position: relative'>
+                <noscript><a href='#'><img alt='Dashboard 2'
+                            src='https://public.tableau.com/static/images/CP/CPA_17436614146550/Dashboard2/1_rss.png'
+                            style='border: none' /></a></noscript>
+                <object class='tableauViz' style='display:none;'>
+                    <param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' />
+                    <param name='embed_code_version' value='3' />
+                    <param name='site_root' value='' />
+                    <param name='name' value='CPA_17436614146550/Dashboard2' />
+                    <param name='tabs' value='no' />
+                    <param name='toolbar' value='yes' />
+                    <param name='static_image'
+                        value='https://public.tableau.com/static/images/CP/CPA_17436614146550/Dashboard2/1.png' />
+                    <param name='animate_transition' value='yes' />
+                    <param name='display_static_image' value='yes' />
+                    <param name='display_spinner' value='yes' />
+                    <param name='display_overlay' value='yes' />
+                    <param name='display_count' value='yes' />
+                    <param name='language' value='en-US' />
+                    <param name='filter' value='publish=yes' />
+                </object>
+            </div>
+            <script type='text/javascript'>
+                var divElement = document.getElementById('viz1743661446196');
+                var vizElement = divElement.getElementsByTagName('object')[0];
+                vizElement.style.width = '100%';
+                vizElement.style.height = (divElement.offsetWidth * 0.75) + 'px';
+                var scriptElement = document.createElement('script');
+                scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';
+                vizElement.parentNode.insertBefore(scriptElement, vizElement);
+            </script>
+        </div>
+    </div>
+
+    <!-- Modal for Actuarial Analyst Dashboard -->
+    <div class="modal-overlay" id="ActuarialAnalystModal">
+        <div class="modal-content">
+            <button class="close-modal" id="closeActuarialAnalystModal">Close</button>
+            <div class="tableauPlaceholder" id="viz1743657635920" style='position: relative'>
+                <noscript><a href='#'><img alt='Dashboard 1'
+                            src='https://public.tableau.com/static/images/ac/actuarialanalyst/Dashboard1/1_rss.png'
+                            style='border: none' /></a></noscript>
+                <object class="tableauViz" style="display:none;">
+                    <param name="host_url" value="https://public.tableau.com/" />
+                    <param name="embed_code_version" value="3" />
+                    <param name="site_root" value="" />
+                    <param name="name" value="actuarialanalyst/Dashboard1" />
+                    <param name="tabs" value="no" />
+                    <param name="toolbar" value="yes" />
+                    <param name="static_image"
+                        value="https://public.tableau.com/static/images/ac/actuarialanalyst/Dashboard1/1.png" />
+                    <param name="animate_transition" value="yes" />
+                    <param name="display_static_image" value="yes" />
+                    <param name="display_spinner" value="yes" />
+                    <param name="display_overlay" value="yes" />
+                    <param name="display_count" value="yes" />
+                    <param name="language" value="en-US" />
+                </object>
+            </div>
+            <script type='text/javascript'>
+                var divElement = document.getElementById('viz1743657635920');
+                var vizElement = divElement.getElementsByTagName('object')[0];
+                vizElement.style.width = '100%';
+                vizElement.style.height = (divElement.offsetWidth * 0.75) + 'px';
+                var scriptElement = document.createElement('script');
+                scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';
+                vizElement.parentNode.insertBefore(scriptElement, vizElement);
+            </script>
+        </div>
+    </div>
+
+    <!-- Company Secretary Dashboard Embed -->
+    <div class="modal-overlay" id="CompanySecretaryModal">
+        <div class="modal-content">
+            <button class="close-modal" id="closeCompanySecretaryModal">Close</button>
+            <div class="tableauPlaceholder" id="viz1743664615968" style='position: relative'>
+                <noscript><a href='#'><img alt='Company Secretary Dashboard'
+                            src='https://public.tableau.com/static/images/CS/CS_17436645867710/Dashboard2/1_rss.png'
+                            style='border: none' /></a></noscript>
+                <object class="tableauViz" style="display:none;">
+                    <param name="host_url" value="https://public.tableau.com/" />
+                    <param name="embed_code_version" value="3" />
+                    <param name="site_root" value="" />
+                    <param name="name" value="CS_17436645867710/Dashboard2" />
+                    <param name="tabs" value="no" />
+                    <param name="toolbar" value="yes" />
+                    <param name="static_image"
+                        value="https://public.tableau.com/static/images/CS/CS_17436645867710/Dashboard2/1.png" />
+                    <param name="animate_transition" value="yes" />
+                    <param name="display_static_image" value="yes" />
+                    <param name="display_spinner" value="yes" />
+                    <param name="display_overlay" value="yes" />
+                    <param name="display_count" value="yes" />
+                    <param name="language" value="en-US" />
+                    <param name="filter" value="publish=yes" />
+                </object>
+            </div>
+            <script type='text/javascript'>
+                var divElement = document.getElementById('viz1743664615968');
+                var vizElement = divElement.getElementsByTagName('object')[0];
+                vizElement.style.width = '100%';
+                vizElement.style.height = (divElement.offsetWidth * 0.75) + 'px';
+                var scriptElement = document.createElement('script');
+                scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';
+                vizElement.parentNode.insertBefore(scriptElement, vizElement);
+            </script>
+        </div>
+    </div>
+
+    <!-- Modal for Financial Advisor Dashboard -->
+    <div class="modal-overlay" id="FinancialAdvisorModal">
+        <div class="modal-content">
+            <button class="close-modal" id="closeFinancialAdvisorModal">Close</button>
+            <div class='tableauPlaceholder' id='vizFinancialAdvisor' style='position: relative'>
+                <noscript><a href='#'><img alt='Financial Advisor Dashboard'
+                            src='https://public.tableau.com/static/images/S7/S7R52H5PG/1_rss.png'
+                            style='border: none' /></a></noscript>
+                <object class='tableauViz' style='display:none;'>
+                    <param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' />
+                    <param name='embed_code_version' value='3' />
+                    <param name='path' value='shared/S7R52H5PG' />
+                    <param name='toolbar' value='yes' />
+                    <param name='static_image' value='https://public.tableau.com/static/images/S7/S7R52H5PG/1.png' />
+                    <param name='animate_transition' value='yes' />
+                    <param name='display_static_image' value='yes' />
+                    <param name='display_spinner' value='yes' />
+                    <param name='display_overlay' value='yes' />
+                    <param name='display_count' value='yes' />
+                    <param name='language' value='en-US' />
+                    <param name='filter' value='publish=yes' />
+                </object>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal for Insurance Broker Dashboard -->
+    <div class="modal-overlay" id="InsuranceBrokerModal">
+        <div class="modal-content">
+            <button class="close-modal" id="closeInsuranceBrokerModal">Close</button>
+            <div class='tableauPlaceholder' id='vizInsuranceBroker' style='position: relative'>
+                <noscript><a href='#'><img alt='Insurance Broker Dashboard'
+                            src='https://public.tableau.com/static/images/In/InsuranceBroker_17454063976020/Dashboard1/1_rss.png'
+                            style='border: none' /></a></noscript>
+                <object class='tableauViz' style='display:none;'>
+                    <param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' />
+                    <param name='embed_code_version' value='3' />
+                    <param name='site_root' value='' />
+                    <param name='name' value='InsuranceBroker_17454063976020/Dashboard1' />
+                    <param name='tabs' value='no' />
+                    <param name='toolbar' value='yes' />
+                    <param name='static_image'
+                        value='https://public.tableau.com/static/images/In/InsuranceBroker_17454063976020/Dashboard1/1.png' />
+                    <param name='animate_transition' value='yes' />
+                    <param name='display_static_image' value='yes' />
+                    <param name='display_spinner' value='yes' />
+                    <param name='display_overlay' value='yes' />
+                    <param name='display_count' value='yes' />
+                    <param name='language' value='en-US' />
+                    <param name='filter' value='publish=yes' />
+                </object>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal for Financial Analyst Dashboard -->
+    <div class="modal-overlay" id="FinancialAnalystModal">
+        <div class="modal-content">
+            <button class="close-modal" id="closeFinancialAnalystModal">Close</button>
+            <div class='tableauPlaceholder' id='vizFinancialAnalyst' style='position: relative'>
+                <noscript><a href='#'><img alt='Financial Analyst Dashboard'
+                            src='https://public.tableau.com/static/images/Fi/FinancialAnalyst_17454144686720/Dashboard1/1_rss.png'
+                            style='border: none' /></a></noscript>
+                <object class='tableauViz' style='display:none;'>
+                    <param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' />
+                    <param name='embed_code_version' value='3' />
+                    <param name='site_root' value='' />
+                    <param name='name' value='FinancialAnalyst_17454144686720/Dashboard1' />
+                    <param name='tabs' value='no' />
+                    <param name='toolbar' value='yes' />
+                    <param name='static_image'
+                        value='https://public.tableau.com/static/images/Fi/FinancialAnalyst_17454144686720/Dashboard1/1.png' />
+                    <param name='animate_transition' value='yes' />
+                    <param name='display_static_image' value='yes' />
+                    <param name='display_spinner' value='yes' />
+                    <param name='display_overlay' value='yes' />
+                    <param name='display_count' value='yes' />
+                    <param name='language' value='en-US' />
+                    <param name='filter' value='publish=yes' />
+                </object>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal for Investment Banker Dashboard -->
+    <div class="modal-overlay" id="InvestmentBankerModal">
+        <div class="modal-content">
+            <button class="close-modal" id="closeInvestmentBankerModal">Close</button>
+            <div class='tableauPlaceholder' id='vizInvestmentBanker' style='position: relative'>
+                <noscript><a href='#'><img alt='Investment Banker Dashboard'
+                            src='https://public.tableau.com/static/images/In/InvestmentBanker/Dashboard1/1_rss.png'
+                            style='border: none' /></a></noscript>
+                <object class='tableauViz' style='display:none;'>
+                    <param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' />
+                    <param name='embed_code_version' value='3' />
+                    <param name='site_root' value='' />
+                    <param name='name' value='InvestmentBanker/Dashboard1' />
+                    <param name='tabs' value='no' />
+                    <param name='toolbar' value='yes' />
+                    <param name='static_image'
+                        value='https://public.tableau.com/static/images/In/InvestmentBanker/Dashboard1/1.png' />
+                    <param name='animate_transition' value='yes' />
+                    <param name='display_static_image' value='yes' />
+                    <param name='display_spinner' value='yes' />
+                    <param name='display_overlay' value='yes' />
+                    <param name='display_count' value='yes' />
+                    <param name='language' value='en-US' />
+                    <param name='filter' value='publish=yes' />
+                </object>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal for CMA Dashboard -->
+    <div class="modal-overlay" id="CMAModal">
+        <div class="modal-content">
+            <button class="close-modal" id="closeCMAModal">Close</button>
+            <div class='tableauPlaceholder' id='vizCMADashboard' style='position: relative'>
+                <noscript>
+                    <a href='#'>
+                        <img alt='CMA Dashboard'
+                            src='https://public.tableau.com/static/images/CM/CMA_17436723328280/Dashboard1/1_rss.png'
+                            style='border: none' />
+                    </a>
+                </noscript>
+                <object class='tableauViz' style='display:none;'>
+                    <param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' />
+                    <param name='embed_code_version' value='3' />
+                    <param name='site_root' value='' />
+                    <param name='name' value='CMA_17436723328280/Dashboard1' />
+                    <param name='tabs' value='no' />
+                    <param name='toolbar' value='yes' />
+                    <param name='static_image'
+                        value='https://public.tableau.com/static/images/CM/CMA_17436723328280/Dashboard1/1.png' />
+                    <param name='animate_transition' value='yes' />
+                    <param name='display_static_image' value='yes' />
+                    <param name='display_spinner' value='yes' />
+                    <param name='display_overlay' value='yes' />
+                    <param name='display_count' value='yes' />
+                    <param name='language' value='en-US' />
+                    <param name='filter' value='publish=yes' />
+                </object>
+            </div>
+        </div>
+    </div>
+
+
+    <script>
+        // Set up event listeners after DOM is loaded
+        document.addEventListener('DOMContentLoaded', () => {
+            // Button click handlers for each dashboard
+            document.getElementById('AuditorButton').addEventListener('click', () => {
+                document.getElementById('AuditorModal').style.display = 'flex';
+            });
+
+            document.getElementById('ChartedAccountantButton').addEventListener('click', () => {
+                document.getElementById('ChartedAccountantModal').style.display = 'flex';
+            });
+
+            document.getElementById('CertifiedpublicaccountantButton').addEventListener('click', () => {
+                document.getElementById('CertifiedpublicaccountantModal').style.display = 'flex';
+            });
+
+            document.getElementById('ActuarialAnalystButton').addEventListener('click', () => {
+                document.getElementById('ActuarialAnalystModal').style.display = 'flex';
+            });
+
+            document.getElementById('CompanySecretaryButton').addEventListener('click', () => {
+                document.getElementById('CompanySecretaryModal').style.display = 'flex';
+            });
+
+            document.getElementById('FinancialAdvisorButton').addEventListener('click', () => {
+                document.getElementById('FinancialAdvisorModal').style.display = 'flex';
+                loadFinancialAdvisorDashboard();
+            });
+
+            document.getElementById('InsuranceBrokerButton').addEventListener('click', () => {
+                document.getElementById('InsuranceBrokerModal').style.display = 'flex';
+                loadInsuranceBrokerDashboard();
+            });
+
+            document.getElementById('FinancialAnalystButton').addEventListener('click', () => {
+                document.getElementById('FinancialAnalystModal').style.display = 'flex';
+                loadFinancialAnalystDashboard();
+            });
+
+            document.getElementById('InvestmentBankerButton').addEventListener('click', () => {
+                document.getElementById('InvestmentBankerModal').style.display = 'flex';
+                loadInvestmentBankerDashboard();
+            });
+
+            document.getElementById('CMAButton').addEventListener('click', () => {
+                document.getElementById('CMAModal').style.display = 'flex';
+                loadCMADashboard();
+            });
+
+            // Close modal handlers
+            document.getElementById('closeAuditorModal').addEventListener('click', () => {
+                document.getElementById('AuditorModal').style.display = 'none';
+            });
+            document.getElementById('closeChartedAccountantModal').addEventListener('click', () => {
+                document.getElementById('ChartedAccountantModal').style.display = 'none';
+            });
+            document.getElementById('closeCertifiedpublicaccountantModal').addEventListener('click', () => {
+                document.getElementById('CertifiedpublicaccountantModal').style.display = 'none';
+            });
+            document.getElementById('closeActuarialAnalystModal').addEventListener('click', () => {
+                document.getElementById('ActuarialAnalystModal').style.display = 'none';
+            });
+            document.getElementById('closeCompanySecretaryModal').addEventListener('click', () => {
+                document.getElementById('CompanySecretaryModal').style.display = 'none';
+            });
+
+
+            document.getElementById('closeFinancialAdvisorModal').addEventListener('click', () => {
+                document.getElementById('FinancialAdvisorModal').style.display = 'none';
+            });
+
+            document.getElementById('closeInsuranceBrokerModal').addEventListener('click', () => {
+                document.getElementById('InsuranceBrokerModal').style.display = 'none';
+            });
+
+            document.getElementById('closeFinancialAnalystModal').addEventListener('click', () => {
+                document.getElementById('FinancialAnalystModal').style.display = 'none';
+            });
+
+            document.getElementById('closeInvestmentBankerModal').addEventListener('click', () => {
+                document.getElementById('InvestmentBankerModal').style.display = 'none';
+            });
+
+            document.getElementById('closeCMAModal').addEventListener('click', () => {
+                document.getElementById('CMAModal').style.display = 'none';
+            });
+
+            // Close modal when clicking outside
+            document.querySelectorAll('.modal-overlay').forEach(modal => {
+                modal.addEventListener('click', (e) => {
+                    if (e.target === modal) {
+                        modal.style.display = 'none';
+                    }
+                });
+            });
+
+            // Button effects
+            document.querySelectorAll('.button-grid button').forEach(button => {
+                button.addEventListener('mousemove', (e) => {
+                    const rect = button.getBoundingClientRect();
+                    const x = e.clientX - rect.left;
+                    const y = e.clientY - rect.top;
+                    const centerX = rect.width / 2;
+                    const centerY = rect.height / 2;
+                    const rotateX = ((y - centerY) / centerY) * 3;
+                    const rotateY = ((x - centerX) / centerX) * -3;
+                    button.style.setProperty('--rotate-x', `${rotateX}deg`);
+                    button.style.setProperty('--rotate-y', `${rotateY}deg`);
+                });
+
+                button.addEventListener('mouseleave', () => {
+                    button.style.setProperty('--rotate-x', '0deg');
+                    button.style.setProperty('--rotate-y', '0deg');
+                });
+
+                button.addEventListener('click', () => {
+                    button.style.backgroundColor = 'rgba(76, 175, 80, 0.5)';
+                    setTimeout(() => {
+                        button.style.backgroundColor = 'rgba(76, 175, 80, 0.2)';
+                    }, 200);
+                });
+            });
+
+            // Dashboard loading functions
+            function loadFinancialAdvisorDashboard() {
+                var divElement = document.getElementById('vizFinancialAdvisor');
+                var vizElement = divElement.getElementsByTagName('object')[0];
+                setDashboardSize(divElement, vizElement, 1527);
+                loadTableauScript(vizElement);
+            }
+
+            function loadInsuranceBrokerDashboard() {
+                var divElement = document.getElementById('vizInsuranceBroker');
+                var vizElement = divElement.getElementsByTagName('object')[0];
+                setDashboardSize(divElement, vizElement, 1377);
+                loadTableauScript(vizElement);
+            }
+
+            function loadFinancialAnalystDashboard() {
+                var divElement = document.getElementById('vizFinancialAnalyst');
+                var vizElement = divElement.getElementsByTagName('object')[0];
+                setDashboardSize(divElement, vizElement, 1527);
+                loadTableauScript(vizElement);
+            }
+
+            function loadInvestmentBankerDashboard() {
+                var divElement = document.getElementById('vizInvestmentBanker');
+                var vizElement = divElement.getElementsByTagName('object')[0];
+                setDashboardSize(divElement, vizElement, 1377);
+                loadTableauScript(vizElement);
+            }
+
+            // Helper functions
+            function setDashboardSize(divElement, vizElement, mobileHeight) {
+                if (divElement.offsetWidth > 800) {
+                    vizElement.style.minWidth = '800px';
+                    vizElement.style.maxWidth = '100%';
+                    vizElement.style.minHeight = '627px';
+                    vizElement.style.maxHeight = (divElement.offsetWidth * 0.75) + 'px';
+                } else if (divElement.offsetWidth > 500) {
+                    vizElement.style.minWidth = '800px';
+                    vizElement.style.maxWidth = '100%';
+                    vizElement.style.minHeight = '627px';
+                    vizElement.style.maxHeight = (divElement.offsetWidth * 0.75) + 'px';
+                } else {
+                    vizElement.style.width = '100%';
+                    vizElement.style.height = mobileHeight + 'px';
+                }
+            }
+
+            function loadTableauScript(vizElement) {
+                var scriptElement = document.createElement('script');
+                scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';
+                vizElement.parentNode.insertBefore(scriptElement, vizElement);
+            }
+
+            function loadCMADashboard() {
+                var divElement = document.getElementById('vizCMADashboard');
+                var vizElement = divElement.getElementsByTagName('object')[0];
+
+                if (divElement.offsetWidth > 800) {
+                    vizElement.style.minWidth = '800px';
+                    vizElement.style.maxWidth = '100%';
+                    vizElement.style.minHeight = '627px';
+                    vizElement.style.maxHeight = (divElement.offsetWidth * 0.75) + 'px';
+                } else if (divElement.offsetWidth > 500) {
+                    vizElement.style.minWidth = '800px';
+                    vizElement.style.maxWidth = '100%';
+                    vizElement.style.minHeight = '627px';
+                    vizElement.style.maxHeight = (divElement.offsetWidth * 0.75) + 'px';
+                } else {
+                    vizElement.style.width = '100%';
+                    vizElement.style.height = '1527px';
+                }
+
+                var scriptElement = document.createElement('script');
+                scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';
+                vizElement.parentNode.insertBefore(scriptElement, vizElement);
+            }
+        });
+
+
+
+    </script>
+</body>
+
+</html>

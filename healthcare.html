@@ -1,0 +1,703 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Healthcare Careers 2025</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        /* Modern CSS Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Gradient Background */
+        body {
+            font-family: 'Poppins', sans-serif;
+            min-height: 100vh;
+            background: linear-gradient(135deg,
+                    rgba(16, 24, 39, 0.95) 0%,
+                    rgba(31, 41, 55, 0.95) 100%),
+                url('bgimage.jpg') center/cover fixed;
+            color: #fff;
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        /* Modern Glassmorphism Header */
+        header {
+            backdrop-filter: blur(10px);
+            background: rgba(255, 255, 255, 0.08);
+            padding: 1rem 5%;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: #fff;
+            text-decoration: none;
+            transition: transform 0.3s ease;
+        }
+
+        .logo img {
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .logo span {
+            color: #4CAF50;
+            position: relative;
+            animation: arrowPulse 1.5s infinite;
+        }
+
+        @keyframes arrowPulse {
+
+            0%,
+            100% {
+                opacity: 1;
+            }
+
+            50% {
+                opacity: 0.5;
+            }
+        }
+
+        /* Navigation Enhancements */
+        nav ul {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: 500;
+            position: relative;
+            padding: 0.5rem 1rem;
+            border-radius: 0.5rem;
+            transition: all 0.3s ease;
+        }
+
+        nav a::before {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: #4CAF50;
+            transition: width 0.3s ease;
+        }
+
+        nav a:hover::before {
+            width: 100%;
+        }
+
+        /* Main Content Section */
+        .healthcare-section {
+            padding: 120px 5% 50px;
+            text-align: center;
+        }
+
+        h2 {
+            font-size: 2.8rem;
+            margin-bottom: 2rem;
+            background: linear-gradient(45deg, #4CAF50, #2196F3);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Enhanced Main Button */
+        .main-button {
+            padding: 1.2rem 2.5rem;
+            font-size: 1.2rem;
+            background: linear-gradient(45deg, #4CAF50, #2196F3);
+            border: none;
+            border-radius: 1rem;
+            color: white;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+            position: relative;
+            overflow: hidden;
+            margin: 2rem 0;
+        }
+
+        .main-button::after {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: rgba(255, 255, 255, 0.1);
+            transform: rotate(45deg) translate(-20%, 100%);
+            transition: all 0.5s ease;
+        }
+
+        .main-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 12px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        .main-button:hover::after {
+            transform: rotate(45deg) translate(20%, -100%);
+        }
+
+        /* Interactive Grid Buttons */
+        .button-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        .button-grid button {
+            padding: 1.5rem;
+            background: rgba(76, 175, 80, 0.1);
+            border: 1px solid rgba(76, 175, 80, 0.3);
+            border-radius: 1rem;
+            color: #fff;
+            font-size: 1.1rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            backdrop-filter: blur(5px);
+            position: relative;
+            overflow: hidden;
+            transform: perspective(500px) rotateX(0) rotateY(0);
+            box-shadow:
+                inset 0 0 15px rgba(76, 175, 80, 0.6),
+                0 0 20px rgba(76, 175, 80, 0.4);
+        }
+
+        .button-grid button:hover {
+            background: rgba(76, 175, 80, 0.3);
+            box-shadow:
+                inset 0 0 25px rgba(76, 175, 80, 0.8),
+                0 0 30px rgba(76, 175, 80, 0.6);
+            transform: perspective(500px) rotateX(10deg) rotateY(10deg);
+        }
+
+        .button-grid button:active {
+            background: rgba(76, 175, 80, 0.5);
+            box-shadow:
+                inset 0 0 35px rgba(76, 175, 80, 1),
+                0 0 40px rgba(76, 175, 80, 0.8);
+        }
+
+        /* Scroll Animation */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .healthcare-section>* {
+            animation: fadeInUp 0.8s ease-out forwards;
+            opacity: 0;
+        }
+
+        .healthcare-section h2 {
+            animation-delay: 0.2s;
+        }
+
+        .main-button {
+            animation-delay: 0.4s;
+        }
+
+        .button-grid {
+            animation-delay: 0.6s;
+        }
+
+        /* Modal Styles */
+        .modal-overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.7);
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+        }
+
+        .modal-content {
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            width: 95%;
+            height: 95%;
+            max-width: 1400px;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .close-modal {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background: #f44336;
+            color: white;
+            border: none;
+            padding: 5px 10px;
+            border-radius: 4px;
+            cursor: pointer;
+            z-index: 1001;
+        }
+
+        .tableauPlaceholder {
+            width: 100%;
+            height: calc(100% - 40px);
+            min-height: 600px;
+        }
+
+        .tableauViz {
+            width: 100% !important;
+            height: 100% !important;
+        }
+
+        .placeholder-text {
+            color: #666;
+            font-size: 1.5rem;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <a href="#" class="logo">
+            <img src="logo1.jpg" alt="Healthcare Logo">
+            Healthcare<span>>></span>
+        </a>
+        <nav>
+            <ul>
+                <li><a href="index.php">Home</a></li>
+                <li><a href="#trends">Trends</a></li>
+                <li><a href="#about">About</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="healthcare-section">
+        <h2>Healthcare Careers of the Future!</h2>
+        <button class="main-button">Explore Job Trend Predictions</button>
+
+        <div class="button-grid">
+            <button id="NutritionistButton">🍎 Nutritionist</button>
+            <button id="NursePractitionerButton">👩‍⚕️ Nurse Practitioner</button>
+            <button id="DentistButton">🦷 Dentist</button>
+            <button id="VeterinaryButton">🐾 Veterinary Doctor</button>
+            <button id="PhysicianButton">👨‍⚕️ Physician</button>
+            <button id="NurseButton">👩‍⚕️ Registered Nurse</button>
+            <button id="SurgeonButton">🔪 Surgeon</button>
+            <button id="PharmacistButton">💊 Pharmacist</button>
+            <button id="TherapistButton">🧠 Physical Therapist</button>
+            <button id="PediatricianButton">👶 Pediatrician</button>
+
+        </div>
+    </section>
+
+    <!-- Modal for Physician Dashboard -->
+    <div class="modal-overlay" id="PhysicianModal">
+        <div class="modal-content">
+            <button class="close-modal" id="closePhysicianModal">Close</button>
+            <div class='tableauPlaceholder' id='vizHealthcare1'>
+                <div class="placeholder-text">Physician Career Trends Dashboard<br>(To be connected to Tableau)</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal for Nurse Dashboard -->
+    <div class="modal-overlay" id="NurseModal">
+        <div class="modal-content">
+            <button class="close-modal" id="closeNurseModal">Close</button>
+            <div class='tableauPlaceholder' id='vizHealthcare2'>
+                <div class="placeholder-text">Nursing Career Trends Dashboard<br>(To be connected to Tableau)</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal for Surgeon Dashboard -->
+    <div class="modal-overlay" id="SurgeonModal">
+        <div class="modal-content">
+            <button class="close-modal" id="closeSurgeonModal">Close</button>
+            <div class='tableauPlaceholder' id='vizHealthcare3'>
+                <div class="placeholder-text">Surgical Career Trends Dashboard<br>(To be connected to Tableau)</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal for Pharmacist Dashboard -->
+    <div class="modal-overlay" id="PharmacistModal">
+        <div class="modal-content">
+            <button class="close-modal" id="closePharmacistModal">Close</button>
+            <div class='tableauPlaceholder' id='vizHealthcare4'>
+                <div class="placeholder-text">Pharmacy Career Trends Dashboard<br>(To be connected to Tableau)</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- New Modal for Dentist Dashboard -->
+    <div class="modal-overlay" id="DentistModal">
+        <div class="modal-content">
+            <button class="close-modal" id="closeDentistModal">Close</button>
+            <div class='tableauPlaceholder' id='vizDentistDashboard' style='position: relative'>
+                <noscript>
+                    <a href='#'>
+                        <img alt='Dentist Dashboard'
+                            src='https://public.tableau.com/static/images/De/Dentist_17455974536230/Dashboard1/1_rss.png'
+                            style='border: none' />
+                    </a>
+                </noscript>
+                <object class='tableauViz' style='display:none;'>
+                    <param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' />
+                    <param name='embed_code_version' value='3' />
+                    <param name='site_root' value='' />
+                    <param name='name' value='Dentist_17455974536230/Dashboard1' />
+                    <param name='tabs' value='no' />
+                    <param name='toolbar' value='yes' />
+                    <param name='static_image'
+                        value='https://public.tableau.com/static/images/De/Dentist_17455974536230/Dashboard1/1.png' />
+                    <param name='animate_transition' value='yes' />
+                    <param name='display_static_image' value='yes' />
+                    <param name='display_spinner' value='yes' />
+                    <param name='display_overlay' value='yes' />
+                    <param name='display_count' value='yes' />
+                    <param name='language' value='en-US' />
+                </object>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal for Veterinary Doctor Dashboard -->
+    <div class="modal-overlay" id="VeterinaryModal">
+        <div class="modal-content">
+            <button class="close-modal" id="closeVeterinaryModal">Close</button>
+            <div class='tableauPlaceholder' id='vizVeterinaryDashboard' style='position: relative'>
+                <noscript>
+                    <a href='#'>
+                        <img alt='Veterinary Doctor Dashboard'
+                            src='https://public.tableau.com/static/images/Ve/VeterinaryDoctor/Dashboard1/1_rss.png'
+                            style='border: none' />
+                    </a>
+                </noscript>
+                <object class='tableauViz' style='display:none;'>
+                    <param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' />
+                    <param name='embed_code_version' value='3' />
+                    <param name='site_root' value='' />
+                    <param name='name' value='VeterinaryDoctor/Dashboard1' />
+                    <param name='tabs' value='no' />
+                    <param name='toolbar' value='yes' />
+                    <param name='static_image'
+                        value='https://public.tableau.com/static/images/Ve/VeterinaryDoctor/Dashboard1/1.png' />
+                    <param name='animate_transition' value='yes' />
+                    <param name='display_static_image' value='yes' />
+                    <param name='display_spinner' value='yes' />
+                    <param name='display_overlay' value='yes' />
+                    <param name='display_count' value='yes' />
+                    <param name='language' value='en-US' />
+                    <param name='filter' value='publish=yes' />
+                </object>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal for Nurse Practitioner Dashboard -->
+    <div class="modal-overlay" id="NursePractitionerModal">
+        <div class="modal-content">
+            <button class="close-modal" id="closeNursePractitionerModal">Close</button>
+            <div class='tableauPlaceholder' id='vizNursePractitionerDashboard' style='position: relative'>
+                <noscript>
+                    <a href='#'>
+                        <img alt='Nurse Practitioner Dashboard'
+                            src='https://public.tableau.com/static/images/Nu/NursePractitioner/Dashboard1/1_rss.png'
+                            style='border: none' />
+                    </a>
+                </noscript>
+                <object class='tableauViz' style='display:none;'>
+                    <param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' />
+                    <param name='embed_code_version' value='3' />
+                    <param name='site_root' value='' />
+                    <param name='name' value='NursePractitioner/Dashboard1' />
+                    <param name='tabs' value='no' />
+                    <param name='toolbar' value='yes' />
+                    <param name='static_image'
+                        value='https://public.tableau.com/static/images/Nu/NursePractitioner/Dashboard1/1.png' />
+                    <param name='animate_transition' value='yes' />
+                    <param name='display_static_image' value='yes' />
+                    <param name='display_spinner' value='yes' />
+                    <param name='display_overlay' value='yes' />
+                    <param name='display_count' value='yes' />
+                    <param name='language' value='en-US' />
+                    <param name='filter' value='publish=yes' />
+                </object>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal for Nutritionist Dashboard -->
+    <div class="modal-overlay" id="NutritionistModal">
+        <div class="modal-content">
+            <button class="close-modal" id="closeNutritionistModal">Close</button>
+            <div class='tableauPlaceholder' id='vizNutritionistDashboard' style='position: relative'>
+                <noscript>
+                    <a href='#'>
+                        <img alt='Nutritionist Dashboard'
+                            src='https://public.tableau.com/static/images/Nu/Nutritionist_17456104908170/Dashboard1/1_rss.png'
+                            style='border: none' />
+                    </a>
+                </noscript>
+                <object class='tableauViz' style='display:none;'>
+                    <param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' />
+                    <param name='embed_code_version' value='3' />
+                    <param name='site_root' value='' />
+                    <param name='name' value='Nutritionist_17456104908170/Dashboard1' />
+                    <param name='tabs' value='no' />
+                    <param name='toolbar' value='yes' />
+                    <param name='static_image'
+                        value='https://public.tableau.com/static/images/Nu/Nutritionist_17456104908170/Dashboard1/1.png' />
+                    <param name='animate_transition' value='yes' />
+                    <param name='display_static_image' value='yes' />
+                    <param name='display_spinner' value='yes' />
+                    <param name='display_overlay' value='yes' />
+                    <param name='display_count' value='yes' />
+                    <param name='language' value='en-US' />
+                    <param name='filter' value='publish=yes' />
+                </object>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Set up event listeners after DOM is loaded
+        document.addEventListener('DOMContentLoaded', () => {
+            // Button click handlers for each dashboard
+            document.getElementById('PhysicianButton').addEventListener('click', () => {
+                document.getElementById('PhysicianModal').style.display = 'flex';
+            });
+
+            document.getElementById('NurseButton').addEventListener('click', () => {
+                document.getElementById('NurseModal').style.display = 'flex';
+            });
+
+            document.getElementById('SurgeonButton').addEventListener('click', () => {
+                document.getElementById('SurgeonModal').style.display = 'flex';
+            });
+
+            document.getElementById('PharmacistButton').addEventListener('click', () => {
+                document.getElementById('PharmacistModal').style.display = 'flex';
+            });
+
+            document.getElementById('DentistButton').addEventListener('click', () => {
+                document.getElementById('DentistModal').style.display = 'flex';
+                // Initialize Tableau dashboard
+                loadDentistDashboard();
+            });
+
+            // Add Veterinary Doctor button handler
+            document.getElementById('VeterinaryButton').addEventListener('click', () => {
+                document.getElementById('VeterinaryModal').style.display = 'flex';
+                loadVeterinaryDashboard();
+            });
+            document.getElementById('NursePractitionerButton').addEventListener('click', () => {
+                document.getElementById('NursePractitionerModal').style.display = 'flex';
+                loadNursePractitionerDashboard();
+            });
+
+            document.getElementById('NutritionistButton').addEventListener('click', () => {
+                document.getElementById('NutritionistModal').style.display = 'flex';
+                loadNutritionistDashboard();
+            });
+
+
+            // Close modal handlers
+            document.getElementById('closePhysicianModal').addEventListener('click', () => {
+                document.getElementById('PhysicianModal').style.display = 'none';
+            });
+
+            document.getElementById('closeNurseModal').addEventListener('click', () => {
+                document.getElementById('NurseModal').style.display = 'none';
+            });
+
+            document.getElementById('closeSurgeonModal').addEventListener('click', () => {
+                document.getElementById('SurgeonModal').style.display = 'none';
+            });
+
+            document.getElementById('closePharmacistModal').addEventListener('click', () => {
+                document.getElementById('PharmacistModal').style.display = 'none';
+            });
+
+            document.getElementById('closeDentistModal').addEventListener('click', () => {
+                document.getElementById('DentistModal').style.display = 'none';
+            });
+
+            document.getElementById('closeVeterinaryModal').addEventListener('click', () => {
+                document.getElementById('VeterinaryModal').style.display = 'none';
+            });
+
+            document.getElementById('closeNursePractitionerModal').addEventListener('click', () => {
+                document.getElementById('NursePractitionerModal').style.display = 'none';
+            });
+
+            document.getElementById('closeNutritionistModal').addEventListener('click', () => {
+                document.getElementById('NutritionistModal').style.display = 'none';
+            });
+
+
+            // Close modal when clicking outside
+            document.querySelectorAll('.modal-overlay').forEach(modal => {
+                modal.addEventListener('click', (e) => {
+                    if (e.target === modal) {
+                        modal.style.display = 'none';
+                    }
+                });
+            });
+            // Button effects
+            document.querySelectorAll('.button-grid button').forEach(button => {
+                button.addEventListener('mousemove', (e) => {
+                    const rect = button.getBoundingClientRect();
+                    const x = e.clientX - rect.left;
+                    const y = e.clientY - rect.top;
+                    const centerX = rect.width / 2;
+                    const centerY = rect.height / 2;
+                    const rotateX = ((y - centerY) / centerY) * 3;
+                    const rotateY = ((x - centerX) / centerX) * -3;
+                    button.style.setProperty('--rotate-x', `${rotateX}deg`);
+                    button.style.setProperty('--rotate-y', `${rotateY}deg`);
+                });
+
+                button.addEventListener('mouseleave', () => {
+                    button.style.setProperty('--rotate-x', '0deg');
+                    button.style.setProperty('--rotate-y', '0deg');
+                });
+
+                button.addEventListener('click', () => {
+                    button.style.backgroundColor = 'rgba(76, 175, 80, 0.5)';
+                    setTimeout(() => {
+                        button.style.backgroundColor = 'rgba(76, 175, 80, 0.2)';
+                    }, 200);
+                });
+            });
+
+            // Function to load the Dentist Tableau dashboard
+            function loadDentistDashboard() {
+                const divElement = document.getElementById('vizDentistDashboard');
+                const vizElement = divElement.getElementsByTagName('object')[0];
+
+                if (divElement.offsetWidth > 800) {
+                    vizElement.style.minWidth = '800px';
+                    vizElement.style.maxWidth = '100%';
+                    vizElement.style.minHeight = '627px';
+                    vizElement.style.maxHeight = (divElement.offsetWidth * 0.75) + 'px';
+                } else if (divElement.offsetWidth > 500) {
+                    vizElement.style.minWidth = '800px';
+                    vizElement.style.maxWidth = '100%';
+                    vizElement.style.minHeight = '627px';
+                    vizElement.style.maxHeight = (divElement.offsetWidth * 0.75) + 'px';
+                } else {
+                    vizElement.style.width = '100%';
+                    vizElement.style.height = '927px';
+                }
+
+                const scriptElement = document.createElement('script');
+                scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';
+                vizElement.parentNode.insertBefore(scriptElement, vizElement);
+            }
+
+            // Function to load the Veterinary Doctor Tableau dashboard
+            function loadVeterinaryDashboard() {
+                var divElement = document.getElementById('vizVeterinaryDashboard');
+                var vizElement = divElement.getElementsByTagName('object')[0];
+
+                if (divElement.offsetWidth > 800) {
+                    vizElement.style.minWidth = '800px';
+                    vizElement.style.maxWidth = '100%';
+                    vizElement.style.minHeight = '627px';
+                    vizElement.style.maxHeight = (divElement.offsetWidth * 0.75) + 'px';
+                } else if (divElement.offsetWidth > 500) {
+                    vizElement.style.minWidth = '800px';
+                    vizElement.style.maxWidth = '100%';
+                    vizElement.style.minHeight = '627px';
+                    vizElement.style.maxHeight = (divElement.offsetWidth * 0.75) + 'px';
+                } else {
+                    vizElement.style.width = '100%';
+                    vizElement.style.height = '1577px';
+                }
+
+                var scriptElement = document.createElement('script');
+                scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';
+                vizElement.parentNode.insertBefore(scriptElement, vizElement);
+            }
+
+
+            // Function to load the Nurse Practitioner Tableau dashboard
+            function loadNursePractitionerDashboard() {
+                var divElement = document.getElementById('vizNursePractitionerDashboard');
+                var vizElement = divElement.getElementsByTagName('object')[0];
+                setDashboardSize(divElement, vizElement, 1527);
+                loadTableauScript(vizElement);
+            }
+
+            // Function to load the Nutritionist Tableau dashboard
+            function loadNutritionistDashboard() {
+                var divElement = document.getElementById('vizNutritionistDashboard');
+                var vizElement = divElement.getElementsByTagName('object')[0];
+                setDashboardSize(divElement, vizElement, 1577);
+                loadTableauScript(vizElement);
+            }
+
+            // Helper functions
+            function setDashboardSize(divElement, vizElement, mobileHeight) {
+                if (divElement.offsetWidth > 800) {
+                    vizElement.style.minWidth = '800px';
+                    vizElement.style.maxWidth = '100%';
+                    vizElement.style.minHeight = '627px';
+                    vizElement.style.maxHeight = (divElement.offsetWidth * 0.75) + 'px';
+                } else if (divElement.offsetWidth > 500) {
+                    vizElement.style.minWidth = '800px';
+                    vizElement.style.maxWidth = '100%';
+                    vizElement.style.minHeight = '627px';
+                    vizElement.style.maxHeight = (divElement.offsetWidth * 0.75) + 'px';
+                } else {
+                    vizElement.style.width = '100%';
+                    vizElement.style.height = mobileHeight + 'px';
+                }
+            }
+
+            function loadTableauScript(vizElement) {
+                var scriptElement = document.createElement('script');
+                scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';
+                vizElement.parentNode.insertBefore(scriptElement, vizElement);
+            }
+        });
+    </script>

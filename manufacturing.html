@@ -1,0 +1,680 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manufacturing Careers 2025</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        /* Modern CSS Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Gradient Background */
+        body {
+            font-family: 'Poppins', sans-serif;
+            min-height: 100vh;
+            background: linear-gradient(135deg,
+                    rgba(16, 24, 39, 0.95) 0%,
+                    rgba(31, 41, 55, 0.95) 100%),
+                url('bgimage.jpg') center/cover fixed;
+            color: #fff;
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        /* Modern Glassmorphism Header */
+        header {
+            backdrop-filter: blur(10px);
+            background: rgba(255, 255, 255, 0.08);
+            padding: 1rem 5%;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: #fff;
+            text-decoration: none;
+            transition: transform 0.3s ease;
+        }
+
+        .logo img {
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .logo span {
+            color: #4CAF50;
+            position: relative;
+            animation: arrowPulse 1.5s infinite;
+        }
+
+        @keyframes arrowPulse {
+
+            0%,
+            100% {
+                opacity: 1;
+            }
+
+            50% {
+                opacity: 0.5;
+            }
+        }
+
+        /* Navigation Enhancements */
+        nav ul {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: 500;
+            position: relative;
+            padding: 0.5rem 1rem;
+            border-radius: 0.5rem;
+            transition: all 0.3s ease;
+        }
+
+        nav a::before {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: #4CAF50;
+            transition: width 0.3s ease;
+        }
+
+        nav a:hover::before {
+            width: 100%;
+        }
+
+        /* Main Content Section */
+        .manufacturing-section {
+            padding: 120px 5% 50px;
+            text-align: center;
+        }
+
+        h2 {
+            font-size: 2.8rem;
+            margin-bottom: 2rem;
+            background: linear-gradient(45deg, #4CAF50, #2196F3);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Enhanced Main Button */
+        .main-button {
+            padding: 1.2rem 2.5rem;
+            font-size: 1.2rem;
+            background: linear-gradient(45deg, #4CAF50, #2196F3);
+            border: none;
+            border-radius: 1rem;
+            color: white;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+            position: relative;
+            overflow: hidden;
+            margin: 2rem 0;
+        }
+
+        .main-button::after {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: rgba(255, 255, 255, 0.1);
+            transform: rotate(45deg) translate(-20%, 100%);
+            transition: all 0.5s ease;
+        }
+
+        .main-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 12px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        .main-button:hover::after {
+            transform: rotate(45deg) translate(20%, -100%);
+        }
+
+        /* Interactive Grid Buttons */
+        .button-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        .button-grid button {
+            padding: 1.5rem;
+            background: rgba(76, 175, 80, 0.1);
+            border: 1px solid rgba(76, 175, 80, 0.3);
+            border-radius: 1rem;
+            color: #fff;
+            font-size: 1.1rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            backdrop-filter: blur(5px);
+            position: relative;
+            overflow: hidden;
+            transform: perspective(500px) rotateX(0) rotateY(0);
+            box-shadow:
+                inset 0 0 15px rgba(76, 175, 80, 0.6),
+                0 0 20px rgba(76, 175, 80, 0.4);
+        }
+
+        .button-grid button:hover {
+            background: rgba(76, 175, 80, 0.3);
+            box-shadow:
+                inset 0 0 25px rgba(76, 175, 80, 0.8),
+                0 0 30px rgba(76, 175, 80, 0.6);
+            transform: perspective(500px) rotateX(10deg) rotateY(10deg);
+        }
+
+        .button-grid button:active {
+            background: rgba(76, 175, 80, 0.5);
+            box-shadow:
+                inset 0 0 35px rgba(76, 175, 80, 1),
+                0 0 40px rgba(76, 175, 80, 0.8);
+        }
+
+        /* Scroll Animation */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .manufacturing-section>* {
+            animation: fadeInUp 0.8s ease-out forwards;
+            opacity: 0;
+        }
+
+        .manufacturing-section h2 {
+            animation-delay: 0.2s;
+        }
+
+        .main-button {
+            animation-delay: 0.4s;
+        }
+
+        .button-grid {
+            animation-delay: 0.6s;
+        }
+
+        /* Modal Styles */
+        .modal-overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.7);
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+        }
+
+        .modal-content {
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            width: 95%;
+            height: 95%;
+            max-width: 1400px;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .close-modal {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background: #f44336;
+            color: white;
+            border: none;
+            padding: 5px 10px;
+            border-radius: 4px;
+            cursor: pointer;
+            z-index: 1001;
+        }
+
+        .tableauPlaceholder {
+            width: 100%;
+            height: calc(100% - 40px);
+            min-height: 600px;
+        }
+
+        .tableauViz {
+            width: 100% !important;
+            height: 100% !important;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <a href="#" class="logo">
+            <img src="logo1.jpg" alt="Manufacturing Logo">
+            Manufacturing<span>>></span>
+        </a>
+        <nav>
+            <ul>
+                <li><a href="index.php">Home</a></li>
+                <li><a href="#trends">Trends</a></li>
+                <li><a href="#about">About</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="manufacturing-section">
+        <h2>Engineering Careers of the Future!</h2>
+        <button class="main-button">Explore Job Trend Predictions</button>
+
+        <div class="button-grid">
+            <button id="ElectricalTechnicianButton">⚡ Electrical Technician</button>
+            <button id="IndustrialEngineerButton">🏭 Industrial Engineer</button>
+            <button id="ProductionManagerButton">📦 Production Manager</button>
+            <button id="ProductionPlannerButton">📅 Production Planner</button>
+            <button id="QualityAssuranceManagerButton">✅ Quality Assurance Manager</button>
+            <button id="RoboticsEngineerButton">🤖 Robotics Engineer</button>
+            <button id="SupplyChainAnalystButton">📊 Supply Chain Analyst</button>
+            <button id="LogisticsManagerButton">🚚 Logistics Manager</button>
+            <button id="MaterialsManagerButton">🛠️ Materials Manager</button>
+            <button id="OperationsManagerButton">⚙️ Operations Manager</button>
+        </div>
+    </section>
+
+    <!-- Modal for Electrical Technician Dashboard -->
+    <div class="modal-overlay" id="ElectricalTechnicianModal">
+        <div class="modal-content">
+            <button class="close-modal" id="closeElectricalTechnicianModal">Close</button>
+            <div class='tableauPlaceholder' id='viz1745504962845' style='position: relative'>
+                <noscript><a href='#'><img alt='Dashboard 1'
+                            src='https://public.tableau.com/static/images/El/ElectrialTechnician/Dashboard1/1_rss.png'
+                            style='border: none' /></a></noscript>
+                <object class='tableauViz' style='display:none;'>
+                    <param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' />
+                    <param name='embed_code_version' value='3' />
+                    <param name='site_root' value='' />
+                    <param name='name' value='ElectrialTechnician/Dashboard1' />
+                    <param name='tabs' value='no' />
+                    <param name='toolbar' value='yes' />
+                    <param name='static_image'
+                        value='https://public.tableau.com/static/images/El/ElectrialTechnician/Dashboard1/1.png' />
+                    <param name='animate_transition' value='yes' />
+                    <param name='display_static_image' value='yes' />
+                    <param name='display_spinner' value='yes' />
+                    <param name='display_overlay' value='yes' />
+                    <param name='display_count' value='yes' />
+                    <param name='language' value='en-US' />
+                    <param name='filter' value='publish=yes' />
+                </object>
+            </div>
+            <script type='text/javascript'>
+                var divElement = document.getElementById('viz1745504962845');
+                var vizElement = divElement.getElementsByTagName('object')[0];
+                vizElement.style.width = '100%';
+                vizElement.style.height = (divElement.offsetWidth * 0.75) + 'px';
+                var scriptElement = document.createElement('script');
+                scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';
+                vizElement.parentNode.insertBefore(scriptElement, vizElement);
+            </script>
+        </div>
+    </div>
+
+    <!-- Modal for Industrial Engineer Dashboard -->
+    <div class="modal-overlay" id="IndustrialEngineerModal">
+        <div class="modal-content">
+            <button class="close-modal" id="closeIndustrialEngineerModal">Close</button>
+            <div class='tableauPlaceholder' id='viz1745506733815' style='position: relative'>
+                <noscript><a href='#'><img alt='Dashboard 1'
+                            src='https://public.tableau.com/static/images/In/IndustrialEngineer/Dashboard1/1_rss.png'
+                            style='border: none' /></a></noscript>
+                <object class='tableauViz' style='display:none;'>
+                    <param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' />
+                    <param name='embed_code_version' value='3' />
+                    <param name='site_root' value='' />
+                    <param name='name' value='IndustrialEngineer/Dashboard1' />
+                    <param name='tabs' value='no' />
+                    <param name='toolbar' value='yes' />
+                    <param name='static_image'
+                        value='https://public.tableau.com/static/images/In/IndustrialEngineer/Dashboard1/1.png' />
+                    <param name='animate_transition' value='yes' />
+                    <param name='display_static_image' value='yes' />
+                    <param name='display_spinner' value='yes' />
+                    <param name='display_overlay' value='yes' />
+                    <param name='display_count' value='yes' />
+                    <param name='language' value='en-US' />
+                    <param name='filter' value='publish=yes' />
+                </object>
+            </div>
+            <script type='text/javascript'>
+                var divElement = document.getElementById('viz1745506733815');
+                var vizElement = divElement.getElementsByTagName('object')[0];
+                vizElement.style.width = '100%';
+                vizElement.style.height = (divElement.offsetWidth * 0.75) + 'px';
+                var scriptElement = document.createElement('script');
+                scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';
+                vizElement.parentNode.insertBefore(scriptElement, vizElement);
+            </script>
+        </div>
+    </div>
+
+    <!-- Modal for Production Manager Dashboard -->
+    <div class="modal-overlay" id="ProductionManagerModal">
+        <div class="modal-content">
+            <button class="close-modal" id="closeProductionManagerModal">Close</button>
+            <div class='tableauPlaceholder' id='viz1745508685967' style='position: relative'>
+                <noscript><a href='#'><img alt='Dashboard 1'
+                            src='https://public.tableau.com/static/images/QN/QN5MK25WW/1_rss.png'
+                            style='border: none' /></a></noscript>
+                <object class='tableauViz' style='display:none;'>
+                    <param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' />
+                    <param name='embed_code_version' value='3' />
+                    <param name='path' value='shared/QN5MK25WW' />
+                    <param name='toolbar' value='yes' />
+                    <param name='static_image' value='https://public.tableau.com/static/images/QN/QN5MK25WW/1.png' />
+                    <param name='animate_transition' value='yes' />
+                    <param name='display_static_image' value='yes' />
+                    <param name='display_spinner' value='yes' />
+                    <param name='display_overlay' value='yes' />
+                    <param name='display_count' value='yes' />
+                    <param name='language' value='en-US' />
+                    <param name='filter' value='publish=yes' />
+                </object>
+            </div>
+            <script type='text/javascript'>
+                var divElement = document.getElementById('viz1745508685967');
+                var vizElement = divElement.getElementsByTagName('object')[0];
+                vizElement.style.width = '100%';
+                vizElement.style.height = (divElement.offsetWidth * 0.75) + 'px';
+                var scriptElement = document.createElement('script');
+                scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';
+                vizElement.parentNode.insertBefore(scriptElement, vizElement);
+            </script>
+        </div>
+    </div>
+
+    <!-- Modal for Production Planner Dashboard -->
+    <div class="modal-overlay" id="ProductionPlannerModal">
+        <div class="modal-content">
+            <button class="close-modal" id="closeProductionPlannerModal">Close</button>
+            <div class='tableauPlaceholder' id='viz1745509647641' style='position: relative'>
+                <noscript><a href='#'><img alt='Dashboard 1'
+                            src='https://public.tableau.com/static/images/Pr/ProductionPlanner/Dashboard1/1_rss.png'
+                            style='border: none' /></a></noscript>
+                <object class='tableauViz' style='display:none;'>
+                    <param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' />
+                    <param name='embed_code_version' value='3' />
+                    <param name='site_root' value='' />
+                    <param name='name' value='ProductionPlanner/Dashboard1' />
+                    <param name='tabs' value='no' />
+                    <param name='toolbar' value='yes' />
+                    <param name='static_image'
+                        value='https://public.tableau.com/static/images/Pr/ProductionPlanner/Dashboard1/1.png' />
+                    <param name='animate_transition' value='yes' />
+                    <param name='display_static_image' value='yes' />
+                    <param name='display_spinner' value='yes' />
+                    <param name='display_overlay' value='yes' />
+                    <param name='display_count' value='yes' />
+                    <param name='language' value='en-US' />
+                    <param name='filter' value='publish=yes' />
+                </object>
+            </div>
+            <script type='text/javascript'>
+                var divElement = document.getElementById('viz1745509647641');
+                var vizElement = divElement.getElementsByTagName('object')[0];
+                vizElement.style.width = '100%';
+                vizElement.style.height = (divElement.offsetWidth * 0.75) + 'px';
+                var scriptElement = document.createElement('script');
+                scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';
+                vizElement.parentNode.insertBefore(scriptElement, vizElement);
+            </script>
+        </div>
+    </div>
+
+    <!-- Modal for Quality Assurance Manager Dashboard -->
+    <div class="modal-overlay" id="QualityAssuranceManagerModal">
+        <div class="modal-content">
+            <button class="close-modal" id="closeQualityAssuranceManagerModal">Close</button>
+            <div class='tableauPlaceholder' id='viz1745512831087' style='position: relative'>
+                <noscript><a href='#'><img alt='Dashboard 1'
+                            src='https://public.tableau.com/static/images/Qu/QualityAssuranceManager/Dashboard1/1_rss.png'
+                            style='border: none' /></a></noscript>
+                <object class='tableauViz' style='display:none;'>
+                    <param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' />
+                    <param name='embed_code_version' value='3' />
+                    <param name='site_root' value='' />
+                    <param name='name' value='QualityAssuranceManager/Dashboard1' />
+                    <param name='tabs' value='no' />
+                    <param name='toolbar' value='yes' />
+                    <param name='static_image'
+                        value='https://public.tableau.com/static/images/Qu/QualityAssuranceManager/Dashboard1/1.png' />
+                    <param name='animate_transition' value='yes' />
+                    <param name='display_static_image' value='yes' />
+                    <param name='display_spinner' value='yes' />
+                    <param name='display_overlay' value='yes' />
+                    <param name='display_count' value='yes' />
+                    <param name='language' value='en-US' />
+                    <param name='filter' value='publish=yes' />
+                </object>
+            </div>
+            <script type='text/javascript'>
+                var divElement = document.getElementById('viz1745512831087');
+                var vizElement = divElement.getElementsByTagName('object')[0];
+                vizElement.style.width = '100%';
+                vizElement.style.height = (divElement.offsetWidth * 0.75) + 'px';
+                var scriptElement = document.createElement('script');
+                scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';
+                vizElement.parentNode.insertBefore(scriptElement, vizElement);
+            </script>
+        </div>
+    </div>
+
+    <!-- Modal for Robotics Engineer Dashboard -->
+    <div class="modal-overlay" id="RoboticsEngineerModal">
+        <div class="modal-content">
+            <button class="close-modal" id="closeRoboticsEngineerModal">Close</button>
+            <div class='tableauPlaceholder' id='viz1745513386880' style='position: relative'>
+                <noscript><a href='#'><img alt='Dashboard 1'
+                            src='https://public.tableau.com/static/images/Ro/RoboticsEngineer/Dashboard1/1_rss.png'
+                            style='border: none' /></a></noscript>
+                <object class='tableauViz' style='display:none;'>
+                    <param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' />
+                    <param name='embed_code_version' value='3' />
+                    <param name='site_root' value='' />
+                    <param name='name' value='RoboticsEngineer/Dashboard1' />
+                    <param name='tabs' value='no' />
+                    <param name='toolbar' value='yes' />
+                    <param name='static_image'
+                        value='https://public.tableau.com/static/images/Ro/RoboticsEngineer/Dashboard1/1.png' />
+                    <param name='animate_transition' value='yes' />
+                    <param name='display_static_image' value='yes' />
+                    <param name='display_spinner' value='yes' />
+                    <param name='display_overlay' value='yes' />
+                    <param name='display_count' value='yes' />
+                    <param name='language' value='en-US' />
+                    <param name='filter' value='publish=yes' />
+                </object>
+            </div>
+            <script type='text/javascript'>
+                var divElement = document.getElementById('viz1745513386880');
+                var vizElement = divElement.getElementsByTagName('object')[0];
+                vizElement.style.width = '100%';
+                vizElement.style.height = (divElement.offsetWidth * 0.75) + 'px';
+                var scriptElement = document.createElement('script');
+                scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';
+                vizElement.parentNode.insertBefore(scriptElement, vizElement);
+            </script>
+        </div>
+    </div>
+
+    <!-- Modal for Supply Chain Analyst Dashboard -->
+    <div class="modal-overlay" id="SupplyChainAnalystModal">
+        <div class="modal-content">
+            <button class="close-modal" id="closeSupplyChainAnalystModal">Close</button>
+            <div class='tableauPlaceholder' id='viz1745514463584' style='position: relative'>
+                <noscript><a href='#'><img alt='Dashboard 1'
+                            src='https://public.tableau.com/static/images/Su/SupplyChainAnalyst/Dashboard1/1_rss.png'
+                            style='border: none' /></a></noscript>
+                <object class='tableauViz' style='display:none;'>
+                    <param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' />
+                    <param name='embed_code_version' value='3' />
+                    <param name='site_root' value='' />
+                    <param name='name' value='SupplyChainAnalyst/Dashboard1' />
+                    <param name='tabs' value='no' />
+                    <param name='toolbar' value='yes' />
+                    <param name='static_image'
+                        value='https://public.tableau.com/static/images/Su/SupplyChainAnalyst/Dashboard1/1.png' />
+                    <param name='animate_transition' value='yes' />
+                    <param name='display_static_image' value='yes' />
+                    <param name='display_spinner' value='yes' />
+                    <param name='display_overlay' value='yes' />
+                    <param name='display_count' value='yes' />
+                    <param name='language' value='en-US' />
+                    <param name='filter' value='publish=yes' />
+                </object>
+            </div>
+            <script type='text/javascript'>
+                var divElement = document.getElementById('viz1745514463584');
+                var vizElement = divElement.getElementsByTagName('object')[0];
+                vizElement.style.width = '100%';
+                vizElement.style.height = (divElement.offsetWidth * 0.75) + 'px';
+                var scriptElement = document.createElement('script');
+                scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';
+                vizElement.parentNode.insertBefore(scriptElement, vizElement);
+            </script>
+        </div>
+    </div>
+
+    <script>
+        // Set up event listeners after DOM is loaded
+        document.addEventListener('DOMContentLoaded', () => {
+            // Button click handlers for each dashboard
+            document.getElementById('ElectricalTechnicianButton').addEventListener('click', () => {
+                document.getElementById('ElectricalTechnicianModal').style.display = 'flex';
+            });
+
+            document.getElementById('IndustrialEngineerButton').addEventListener('click', () => {
+                document.getElementById('IndustrialEngineerModal').style.display = 'flex';
+            });
+
+            document.getElementById('ProductionManagerButton').addEventListener('click', () => {
+                document.getElementById('ProductionManagerModal').style.display = 'flex';
+            });
+
+            document.getElementById('ProductionPlannerButton').addEventListener('click', () => {
+                document.getElementById('ProductionPlannerModal').style.display = 'flex';
+            });
+
+            document.getElementById('QualityAssuranceManagerButton').addEventListener('click', () => {
+                document.getElementById('QualityAssuranceManagerModal').style.display = 'flex';
+            });
+
+            document.getElementById('RoboticsEngineerButton').addEventListener('click', () => {
+                document.getElementById('RoboticsEngineerModal').style.display = 'flex';
+            });
+
+            document.getElementById('SupplyChainAnalystButton').addEventListener('click', () => {
+                document.getElementById('SupplyChainAnalystModal').style.display = 'flex';
+            });
+
+            // Close modal handlers
+            document.getElementById('closeElectricalTechnicianModal').addEventListener('click', () => {
+                document.getElementById('ElectricalTechnicianModal').style.display = 'none';
+            });
+            document.getElementById('closeIndustrialEngineerModal').addEventListener('click', () => {
+                document.getElementById('IndustrialEngineerModal').style.display = 'none';
+            });
+            document.getElementById('closeProductionManagerModal').addEventListener('click', () => {
+                document.getElementById('ProductionManagerModal').style.display = 'none';
+            });
+            document.getElementById('closeProductionPlannerModal').addEventListener('click', () => {
+                document.getElementById('ProductionPlannerModal').style.display = 'none';
+            });
+            document.getElementById('closeQualityAssuranceManagerModal').addEventListener('click', () => {
+                document.getElementById('QualityAssuranceManagerModal').style.display = 'none';
+            });
+            document.getElementById('closeRoboticsEngineerModal').addEventListener('click', () => {
+                document.getElementById('RoboticsEngineerModal').style.display = 'none';
+            });
+            document.getElementById('closeSupplyChainAnalystModal').addEventListener('click', () => {
+                document.getElementById('SupplyChainAnalystModal').style.display = 'none';
+            });
+
+            // Close modal when clicking outside
+            document.querySelectorAll('.modal-overlay').forEach(modal => {
+                modal.addEventListener('click', (e) => {
+                    if (e.target === modal) {
+                        modal.style.display = 'none';
+                    }
+                });
+            });
+
+            // Button effects
+            document.querySelectorAll('.button-grid button').forEach(button => {
+                button.addEventListener('mousemove', (e) => {
+                    const rect = button.getBoundingClientRect();
+                    const x = e.clientX - rect.left;
+                    const y = e.clientY - rect.top;
+                    const centerX = rect.width / 2;
+                    const centerY = rect.height / 2;
+                    const rotateX = ((y - centerY) / centerY) * 3;
+                    const rotateY = ((x - centerX) / centerX) * -3;
+                    button.style.setProperty('--rotate-x', `${rotateX}deg`);
+                    button.style.setProperty('--rotate-y', `${rotateY}deg`);
+                });
+
+                button.addEventListener('mouseleave', () => {
+                    button.style.setProperty('--rotate-x', '0deg');
+                    button.style.setProperty('--rotate-y', '0deg');
+                });
+
+                button.addEventListener('click', () => {
+                    button.style.backgroundColor = 'rgba(76, 175, 80, 0.5)';
+                    setTimeout(() => {
+                        button.style.backgroundColor = 'rgba(76, 175, 80, 0.2)';
+                    }, 200);
+                });
+            });
+        });
+    </script>
+</body>
+
+</html>
